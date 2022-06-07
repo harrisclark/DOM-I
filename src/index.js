@@ -50,25 +50,14 @@ const ctaImg = cta.querySelector('img');
 const mainContent = document.querySelector('.main-content');
 
 const topContent = mainContent.querySelector('.top-content');
-const featHeading = topContent.querySelector('h4');
-const featPara = topContent.querySelector('p');
+const topHeadings = topContent.querySelectorAll('h4');
+const topParagraphs = topContent.querySelectorAll('p');
 
-const aboutContent = topContent.querySelector('.text-content:nth-of-type(2)');
-const aboutHeading = aboutContent.querySelector('h4');
-const aboutPara = aboutContent.querySelector('p');
 const mainImg = mainContent.querySelector('img');
 
 const bottomContent = mainContent.querySelector('.bottom-content');
-const servHeading = bottomContent.querySelector('h4');
-const servPara = bottomContent.querySelector('p');
-
-const prodContent = bottomContent.querySelector('.text-content:nth-of-type(2)');
-const prodHeading = prodContent.querySelector('h4');
-const prodPara = prodContent.querySelector('p');
-
-const visContent = bottomContent.querySelector('.text-content:nth-of-type(3)');
-const visHeading = visContent.querySelector('h4');
-const visPara = visContent.querySelector('p');
+const bottomHeadings = bottomContent.querySelectorAll('h4');
+const bottomParagraphs = bottomContent.querySelectorAll('p');
 
 const navLinks = document.querySelectorAll('nav a');
 const headerImg = document.querySelector('.container img');
@@ -98,17 +87,17 @@ ctaHeading.textContent = siteContent.cta.h1;
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.src = siteContent.images["cta-img"];
 
-featHeading.textContent = siteContent["main-content"]["features-h4"];
-featPara.textContent = siteContent["main-content"]["features-content"];
-aboutHeading.textContent = siteContent["main-content"]["about-h4"];
-aboutPara.textContent = siteContent["main-content"]["about-content"];
+topHeadings[0].textContent = siteContent["main-content"]["features-h4"];
+topParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+topHeadings[1].textContent = siteContent["main-content"]["about-h4"];
+topParagraphs[1].textContent = siteContent["main-content"]["about-content"];
 mainImg.src = siteContent.images["accent-img"];
-servHeading.textContent = siteContent["main-content"]["services-h4"];
-servPara.textContent = siteContent["main-content"]["services-content"];
-prodHeading.textContent = siteContent["main-content"]["product-h4"];
-prodPara.textContent = siteContent["main-content"]["product-content"];
-visHeading.textContent = siteContent["main-content"]["vision-h4"];
-visPara.textContent = siteContent["main-content"]["vision-content"];
+bottomHeadings[0].textContent = siteContent["main-content"]["services-h4"];
+bottomParagraphs[0].textContent = siteContent["main-content"]["services-content"];
+bottomHeadings[1].textContent = siteContent["main-content"]["product-h4"];
+bottomParagraphs[1].textContent = siteContent["main-content"]["product-content"];
+bottomHeadings[2].textContent = siteContent["main-content"]["vision-h4"];
+bottomParagraphs[2].textContent = siteContent["main-content"]["vision-content"];
 
 
 
