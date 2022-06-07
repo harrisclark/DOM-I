@@ -40,3 +40,75 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// cta elements
+const cta = document.querySelector('.cta');
+const ctaHeading = cta.querySelector('h1');
+const ctaButton = cta.querySelector('button');
+const ctaImg = cta.querySelector('img');
+// main content elements
+const mainContent = document.querySelector('.main-content');
+
+const topContent = mainContent.querySelector('.top-content');
+const featHeading = topContent.querySelector('h4');
+const featPara = topContent.querySelector('p');
+
+const aboutContent = topContent.querySelector('.text-content:nth-of-type(2)');
+const aboutHeading = aboutContent.querySelector('h4');
+const aboutPara = aboutContent.querySelector('p');
+const mainImg = mainContent.querySelector('img');
+
+const bottomContent = mainContent.querySelector('.bottom-content');
+const servHeading = bottomContent.querySelector('h4');
+const servPara = bottomContent.querySelector('p');
+
+const prodContent = bottomContent.querySelector('.text-content:nth-of-type(2)');
+const prodHeading = prodContent.querySelector('h4');
+const prodPara = prodContent.querySelector('p');
+
+const visContent = bottomContent.querySelector('.text-content:nth-of-type(3)');
+const visHeading = visContent.querySelector('h4');
+const visPara = visContent.querySelector('p');
+
+const navLinks = document.querySelectorAll('nav a');
+const headerImg = document.querySelector('.container img');
+const contactInfo = document.querySelector('.contact');
+const contactHeading = contactInfo.querySelector('h4');
+const contactP = contactInfo.querySelectorAll('p');
+const copyright = document.querySelector('footer a');
+
+copyright.textContent = siteContent.footer.copyright;
+copyright.classList.add('bold');
+contactHeading.textContent = siteContent.contact["contact-h4"];
+
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
+
+
+headerImg.src = siteContent.images["logo-img"];
+
+navLinks.forEach((a,i) => {
+  a.classList.add('italic');
+  a.textContent = siteContent.nav[`nav-item-${i+1}`];
+});
+
+
+ctaHeading.textContent = siteContent.cta.h1;
+ctaButton.textContent = siteContent.cta.button;
+ctaImg.src = siteContent.images["cta-img"];
+
+featHeading.textContent = siteContent["main-content"]["features-h4"];
+featPara.textContent = siteContent["main-content"]["features-content"];
+aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+aboutPara.textContent = siteContent["main-content"]["about-content"];
+mainImg.src = siteContent.images["accent-img"];
+servHeading.textContent = siteContent["main-content"]["services-h4"];
+servPara.textContent = siteContent["main-content"]["services-content"];
+prodHeading.textContent = siteContent["main-content"]["product-h4"];
+prodPara.textContent = siteContent["main-content"]["product-content"];
+visHeading.textContent = siteContent["main-content"]["vision-h4"];
+visPara.textContent = siteContent["main-content"]["vision-content"];
+
+
+
